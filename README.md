@@ -137,21 +137,21 @@ Holistic soltution can validate and track in-app purchases by AppsFlyer service
 ``` js
 
 const iOSPurchase = {
-        price: "0.99",
-        productId: "unique product",
-        transactionId: "XXX",
-        currency: "USD",
-        additionalParameters: {}  
+  price: "0.99",
+  productId: "unique product",
+  transactionId: "XXX",
+  currency: "USD",
+  additionalParameters: {}  
 }
 
-    const AndroidPurchase = {
-        price: "0.99",
-        currency: "USD",
-        publicKey: "unique key",
-        signature: "signature",
-        purchaseData: "purchase data",
-        additionalParameters: {}  
-    }
+const AndroidPurchase = {
+  price: "0.99",
+  currency: "USD",
+  publicKey: "unique key",
+  signature: "signature",
+  purchaseData: "purchase data",
+  additionalParameters: {}  
+}
 
 HolisticSolution.validateAndTrackInAppPurchase(Platform.OS === 'ios' ? iOSPurchase : AndroidPurchase)
   .then(response => console.log("Purchase is valid: " + response))
