@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        abortOnError false
+        warning 'InvalidPackage'
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    jcenter() 
+    mavenCentral()
+    maven {
+        url "https://artifactory.appodeal.com/appodeal"
+    }
+}
+
+dependencies {
+    implementation 'com.facebook.react:react-native:+'
+    // Holistic solution
+    implementation 'com.explorestack.hs:sdk:1.0.0'
+    // Appodeal
+    implementation 'com.explorestack.hs.sdk.connector:appodeal:1.0.0'
+    // AppsFlyer service
+    implementation 'com.explorestack.hs.sdk.service:appsflyer:1.0.0'
+    // Firebase service
+    implementation 'com.explorestack.hs.sdk.service:firebase:1.0.0'
+    // Facebook services
+    implementation 'com.explorestack.hs.sdk.service:facebook:1.0.0'
+}

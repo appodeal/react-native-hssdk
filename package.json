@@ -1,0 +1,50 @@
+{
+  "name": "react-native-hssdk",
+  "version": "1.0.0",
+  "description": "React Native Module created to support Holistic Solution SDK for iOS and Android platforms",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appodeal/react-native-hssdk.git"
+  },
+  "homepage": "https://explorestack.com",
+  "main": "dist/lib/index.js",
+  "typings": "dist/types/index.d.ts",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "tsc": "tsc --project .",
+    "lint": "tslint --project .",
+    "prepare": "npm run tsc"
+  },
+  "author": "Stack by Appodeal <https://explorestack.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.6",
+    "@types/react-native": "^0.62.0",
+    "tslib": "^1.9.3",
+    "typescript": "^2.9.2"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "react-component",
+    "appodeal",
+    "monetisation",
+    "android",
+    "ios",
+    "ads"
+  ],
+  "files": [
+    "android",
+    "ios",
+    "src",
+    "package.json",
+    "dist",
+    "RNHolisticSolution.podspec"
+  ]
+}
